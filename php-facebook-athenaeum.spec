@@ -1,8 +1,9 @@
 %define		php_min_version 5.2
+%include	/usr/lib/rpm/macros.php
 Summary:	Tools to extend library services to Facebook users through Facebook applications
 Name:		php-facebook-athenaeum
 Version:	0.1.8
-Release:	0.8
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://facebook-athenaeum.googlecode.com/files/fb-athenaeum-%{version}.tar.gz
@@ -12,7 +13,6 @@ BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	php-common >= 4:%{php_min_version}
 Patch0:		json-dep.patch
 #Requires:	php-date
-Requires:	php-hash
 Requires:	php-json
 Requires:	php-pcre
 Requires:	php-simplexml
@@ -21,15 +21,14 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # bad depsolver
-%define		_noautopeardep	pear(facebookapi_php5_restlib.php)
+%define		_noautopear	pear(facebookapi_php5_restlib.php)
 
 # exclude optional php dependencies
-%define		_noautophpreq	php(curl)
+%define		_noautophp	php-curl
 
-# we don't want php(xxx) being resolved to php-xxx
-%define		_noautoreqdep	php(.*)
+# put it together for rpmbuild
+%define		_noautoreq	%{?_noautophp} %{?_noautopear}
 
-%define		_noautoreq	%{_noautophpreq} %{_noautopeardep}
 
 %description
 Facebook Athenaeum provides libraries an easy to implement Facebook
