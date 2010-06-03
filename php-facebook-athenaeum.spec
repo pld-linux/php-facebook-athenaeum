@@ -2,12 +2,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Tools to extend library services to Facebook users through Facebook applications
 Name:		php-facebook-athenaeum
-Version:	0.1.8
+Version:	0.1.9
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://facebook-athenaeum.googlecode.com/files/fb-athenaeum-%{version}.tar.gz
-# Source0-md5:	a571a6ee843ebebb1740d42a14779783
+# Source0-md5:	da60b59976454a6103021e0ca4d5bef8
 URL:		http://code.google.com/p/facebook-athenaeum/
 BuildRequires:	rpm-php-pearprov
 BuildRequires:	rpmbuild(macros) >= 1.461
@@ -29,7 +29,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # put it together for rpmbuild
 %define		_noautoreq	%{?_noautophp} %{?_noautopear}
-
 
 %description
 Facebook Athenaeum provides libraries an easy to implement Facebook

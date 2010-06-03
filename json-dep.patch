@@ -1,10 +1,11 @@
---- fb-athenaeum-0.1.8/libs/facebook_api/facebookapi_php5_restlib.php~	2008-12-19 23:32:27.000000000 +0200
-+++ fb-athenaeum-0.1.8/libs/facebook_api/facebookapi_php5_restlib.php	2009-12-21 15:21:56.537884420 +0200
-@@ -31,7 +31,6 @@
+--- fb-athenaeum-0.1.9/libs/facebook_api/facebookapi_php5_restlib.php~	2009-12-21 23:15:12.000000000 +0200
++++ fb-athenaeum-0.1.9/libs/facebook_api/facebookapi_php5_restlib.php	2010-06-03 16:43:50.067484407 +0300
+@@ -32,8 +32,6 @@
  // +---------------------------------------------------------------------------+
  //
  
 -include_once 'jsonwrapper/jsonwrapper.php';
+-
  class FacebookRestClient {
    public $secret;
    public $session_key;
