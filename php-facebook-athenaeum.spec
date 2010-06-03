@@ -9,6 +9,7 @@ Group:		Development/Languages/PHP
 Source0:	http://facebook-athenaeum.googlecode.com/files/fb-athenaeum-%{version}.tar.gz
 # Source0-md5:	a571a6ee843ebebb1740d42a14779783
 URL:		http://code.google.com/p/facebook-athenaeum/
+BuildRequires:	rpm-php-pearprov
 BuildRequires:	rpmbuild(macros) >= 1.461
 Requires:	php-common >= 4:%{php_min_version}
 Patch0:		json-dep.patch
