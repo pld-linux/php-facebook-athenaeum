@@ -3,7 +3,7 @@
 Summary:	Tools to extend library services to Facebook users through Facebook applications
 Name:		php-facebook-athenaeum
 Version:	0.1.10
-Release:	3
+Release:	4
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://facebook-athenaeum.googlecode.com/files/fb-athenaeum-%{version}.tar.gz
@@ -17,7 +17,7 @@ Requires:	php(json)
 Requires:	php(pcre)
 Requires:	php(simplexml)
 #Requires:	php-date
-Suggests:	php-curl
+Suggests:	php(curl)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
