@@ -3,7 +3,7 @@
 Summary:	Tools to extend library services to Facebook users through Facebook applications
 Name:		php-facebook-athenaeum
 Version:	0.1.10
-Release:	4
+Release:	5
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://facebook-athenaeum.googlecode.com/files/fb-athenaeum-%{version}.tar.gz
@@ -22,13 +22,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # bad depsolver
-%define		_noautopear	pear(facebookapi_php5_restlib.php)
+%define		_noautoreq_pear	pear(facebookapi_php5_restlib.php)
 
 # exclude optional php dependencies
-%define		_noautophp	php-curl
-
-# put it together for rpmbuild
-%define		_noautoreq	%{?_noautophp} %{?_noautopear}
+%define		_noautoreq	php-curl
 
 %description
 Facebook Athenaeum provides libraries an easy to implement Facebook
