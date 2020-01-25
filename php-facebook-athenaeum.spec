@@ -1,5 +1,4 @@
 %define		php_min_version 5.2
-%include	/usr/lib/rpm/macros.php
 Summary:	Tools to extend library services to Facebook users through Facebook applications
 Name:		php-facebook-athenaeum
 Version:	0.1.10
